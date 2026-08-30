@@ -2,14 +2,11 @@
 
 import { Canvas } from "@react-three/fiber";
 import { Float, OrbitControls } from "@react-three/drei";
-import { useRef } from "react";
 
 function FloatingCube() {
-  const meshRef = useRef(null);
-
   return (
     <Float speed={2} rotationIntensity={0.8} floatIntensity={1.2}>
-      <mesh ref={meshRef}>
+      <mesh>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="#22d3ee" wireframe transparent opacity={0.6} />
       </mesh>

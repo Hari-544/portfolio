@@ -1,12 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
 import { projects } from "../data/portfolioData";
 
 export default function Projects() {
   return (
     <section id="projects" className="py-24 px-6 max-w-7xl mx-auto">
-      <h2 className="text-5xl font-bold mb-12">Projects</h2>
+      <h2 className="text-5xl font-bold mb-4">Projects</h2>
+      <p className="text-gray-400 mb-12">
+        A selection of things I&apos;ve built, from full-stack platforms to ML
+        experiments.
+      </p>
 
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
@@ -16,10 +21,10 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: (index % 2) * 0.1 }}
-            className="p-8 rounded-3xl border border-white/10 bg-white/5 hover:border-cyan-500/40 transition-colors"
+            className="group p-8 rounded-3xl border border-white/10 bg-white/5 hover:border-cyan-500/40 hover:bg-white/[0.07] hover:-translate-y-1 transition-all duration-300"
           >
             <div className="flex items-start justify-between gap-4 mb-4">
-              <h3 className="text-2xl font-bold">{project.title}</h3>
+              <h3 className="text-2xl font-bold text-white">{project.title}</h3>
               {project.comingSoon && (
                 <span className="shrink-0 px-3 py-1 text-xs rounded-full bg-amber-500/20 text-amber-300">
                   Soon
@@ -49,8 +54,9 @@ export default function Projects() {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 rounded-xl bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition-colors shadow-lg shadow-cyan-500/25"
               >
+                <FaGithub size={18} />
                 View Project
               </a>
             )}
