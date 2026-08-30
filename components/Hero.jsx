@@ -79,7 +79,7 @@ export default function Hero() {
             <span className="animate-pulse">|</span>
           </span>
 
-          <h1 className="text-6xl lg:text-7xl font-black leading-tight">
+          <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white">
             PATNALA
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
@@ -87,7 +87,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-gray-400 mt-6 text-lg">
+          <p className="text-gray-300 mt-6 text-lg">
             {personalInfo.heroTagline}
           </p>
 
@@ -102,7 +102,7 @@ export default function Hero() {
 
             <a
               href={`mailto:${personalInfo.email}`}
-              className="px-6 py-3 rounded-xl border border-white/20 hover:bg-white/5 transition-colors"
+              className="px-6 py-3 rounded-xl border border-white/30 text-white hover:bg-white/10 transition-colors"
             >
               Contact Me
             </a>
@@ -140,7 +140,7 @@ export default function Hero() {
           type="button"
           onClick={(e) => scrollTo(e, "#about")}
           aria-label="Scroll to about section"
-          className="text-gray-400 hover:text-cyan-400 transition-colors"
+          className="text-gray-300 hover:text-cyan-400 transition-colors"
         >
           <ChevronDown size={28} />
         </button>

@@ -12,7 +12,7 @@ export default function Skills() {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-5xl font-bold mb-4">Skills</h2>
+        <h2 className="text-5xl font-bold mb-4 text-white">Skills</h2>
         <div className="w-16 h-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 mb-10" />
       </motion.div>
 

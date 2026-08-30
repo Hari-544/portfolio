@@ -2,8 +2,8 @@ import { personalInfo } from "../data/portfolioData";
 
 export default function Footer() {
   return (
-    <footer className="py-12 px-6 bg-black/40 border-t border-white/10">
-      <p className="text-center text-gray-400">
+    <footer className="py-12 px-6 bg-black/50 border-t border-white/10">
+      <p className="text-center text-gray-300">
         © {new Date().getFullYear()} {personalInfo.shortName}. All rights
         reserved.
       </p>

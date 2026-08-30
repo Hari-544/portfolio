@@ -62,7 +62,7 @@ export default function Navbar() {
         <a
           href="#top"
           onClick={(e) => scrollTo(e, "#top")}
-          className="text-xl font-bold hover:text-cyan-400 transition-colors"
+          className="text-xl font-bold text-white hover:text-cyan-400 transition-colors"
         >
           Hari Krishna
         </a>
@@ -90,7 +90,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="hover:text-cyan-400 transition-colors"
+            className="text-white hover:text-cyan-400 transition-colors"
           >
             <FaGithub size={20} />
           </a>
@@ -100,7 +100,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="hover:text-cyan-400 transition-colors"
+            className="text-white hover:text-cyan-400 transition-colors"
           >
             <FaLinkedin size={20} />
           </a>

@@ -13,7 +13,7 @@ export default function Education() {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-5xl font-bold mb-4">Education</h2>
+        <h2 className="text-5xl font-bold mb-4 text-white">Education</h2>
         <div className="w-16 h-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 mb-12" />
       </motion.div>
 
@@ -25,13 +25,13 @@ export default function Education() {
         className="p-8 rounded-3xl border border-white/10 bg-white/5 hover:border-cyan-500/40 transition-colors"
       >
         <GraduationCap className="text-cyan-400 mb-4" size={32} />
-        <h3 className="text-2xl font-bold">{personalInfo.college}</h3>
+        <h3 className="text-2xl font-bold text-white">{personalInfo.college}</h3>
 
         <p className="text-gray-300 mt-2">
           B.Tech - Artificial Intelligence & Machine Learning
         </p>
 
-        <p className="text-gray-400 mt-2">{personalInfo.years}</p>
+        <p className="text-gray-300 mt-2">{personalInfo.years}</p>
 
         <p className="text-cyan-400 font-semibold mt-4">
           CGPA: {personalInfo.cgpa}

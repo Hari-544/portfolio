@@ -7,8 +7,8 @@ import { projects } from "../data/portfolioData";
 export default function Projects() {
   return (
     <section id="projects" className="py-24 px-6 max-w-7xl mx-auto">
-      <h2 className="text-5xl font-bold mb-4">Projects</h2>
-      <p className="text-gray-400 mb-12">
+      <h2 className="text-5xl font-bold mb-4 text-white">Projects</h2>
+      <p className="text-gray-300 mb-12">
         A selection of things I&apos;ve built, from full-stack platforms to ML
         experiments.
       </p>
