@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "PATNALA NAGA RATNA SATYA SAI HARI KRISHNA",
   shortName: "Hari Krishna",
-  role: "AI & ML Engineer",
+  role: "AI & ML Student · Developer",
   email: "patnalaharikrishna9544@gmail.com",
   github: "https://github.com/Hari-544",
   linkedin: "https://www.linkedin.com/in/p-hari-krishna-424510332/",
@@ -11,9 +11,9 @@ export const personalInfo = {
   graduation: "2028",
   years: "2024 - 2028",
   about:
-    "I am Hari Krishna, a B.Tech Artificial Intelligence & Machine Learning student at Sagi Rama Krishnam Raju Engineering College. I enjoy building real-world software products using React, Next.js, Firebase, Machine Learning, and modern web technologies.",
+    "I'm a B.Tech Artificial Intelligence & Machine Learning student at SRKR Engineering College. I enjoy building practical web applications and exploring how data and machine learning can solve everyday problems. I learn by shipping projects, working through bugs, and improving the details.",
   heroTagline:
-    "Passionate AI & ML student building real-world web applications, machine learning solutions, business systems and interactive products.",
+    "I build thoughtful web experiences and explore AI/ML — turning ideas into projects, one iteration at a time.",
 };
 
 export const skills = [
@@ -22,71 +22,70 @@ export const skills = [
   "JavaScript",
   "React",
   "Next.js",
-  "Firebase",
+  "HTML & CSS",
+  "Tailwind CSS",
   "Machine Learning",
+  "Pandas",
+  "scikit-learn",
+  "FastAPI",
+  "Node.js",
   "SQL",
   "PostgreSQL",
-  "Redis",
-  "Git",
-  "GitHub",
-  "Tailwind CSS",
-  "Node.js",
+  "Firebase",
+  "Git & GitHub",
 ];
 
 export const certifications = [
-  "Google Android Developer",
+  "Google Android Developer Virtual Internship",
   "AI-ML Virtual Internship",
-  "AI for Beginners - HP LIFE",
-  "IT for Business - HP LIFE",
-  "Inventory Management - HP LIFE",
-  "AI for All - Intel",
+  "AI for Beginners — HP LIFE",
+  "IT for Business — HP LIFE",
+  "Inventory Management — HP LIFE",
+  "AI for All — Intel",
 ];
 
 export const projects = [
   {
-    title: "Sweet Store E-Commerce",
+    title: "Food Recommendation System",
+    category: "AI / Machine Learning",
     description:
-      "Full-stack sweets e-commerce platform with product catalog, shopping cart, secure checkout, order management, and responsive design.",
-    tech: ["Next.js", "React", "Firebase", "Tailwind CSS"],
+      "A content-based food recommender that represents dish descriptions with TF-IDF features and ranks similar options using cosine similarity.",
+    tech: ["Python", "Pandas", "scikit-learn", "FastAPI"],
+    github: "https://github.com/Hari-544/food-recommendation-system",
+    featured: true,
+  },
+  {
+    title: "Sita Rama Putharekulu",
+    category: "E-commerce · Web",
+    description:
+      "A storefront concept for traditional sweets, built to present products clearly and guide customers through an online ordering flow.",
+    tech: ["React", "Vite", "Firebase", "Razorpay Payment Links"],
     github: "https://github.com/Hari-544/sita-rama-putharekulu",
+    live: "https://sita-rama-putharekulu.vercel.app/",
     featured: true,
   },
   {
     title: "Pharmacy Hub",
+    category: "Web Application",
     description:
-      "Online medical store platform for browsing medicines, placing orders, and managing pharmacy inventory.",
-    tech: ["React", "Firebase", "JavaScript"],
+      "A pharmacy interface for browsing medical products, with a barcode-scanning experiment and browser-based local data storage.",
+    tech: ["HTML", "CSS", "JavaScript", "ZXing"],
     github: "https://github.com/Hari-544/medical-shop-app",
-    featured: true,
   },
   {
     title: "Campus Quick Serve",
+    category: "Campus Utility",
     description:
-      "College canteen preorder system that reduces waiting time by allowing students to order food and select pickup slots.",
-    tech: ["Next.js", "React", "Firebase"],
+      "A canteen pre-ordering interface designed to help students browse a menu and plan food pickup with less queueing.",
+    tech: ["HTML", "CSS", "JavaScript", "Local Storage"],
     github: "https://github.com/Hari-544/canteen-preorder",
-    featured: true,
   },
   {
-    title: "Food Recommendation System",
+    title: "Hit the Target",
+    category: "Interactive Web Game",
     description:
-      "Machine learning-based food recommendation system that suggests dishes according to user preferences.",
-    tech: ["Python", "Machine Learning", "Pandas"],
-    github: "https://github.com/Hari-544/food-recommendation-system",
-  },
-  {
-    title: "Hit The Target Game",
-    description:
-      "Interactive browser game where users upload an image and play a target-hitting challenge.",
+      "A lightweight browser game built to practise interactive UI behaviour and core JavaScript.",
     tech: ["JavaScript", "HTML", "CSS"],
     github: "https://github.com/Hari-544/hit-target-game",
-  },
-  {
-    title: "India Village Address API",
-    description:
-      "Production-ready location API for Indian village address lookup, analytics, quota management, and dashboard monitoring. (Currently in development)",
-    tech: ["Node.js", "PostgreSQL", "Redis", "Next.js"],
-    github: "#",
-    comingSoon: true,
   },
 ];
