@@ -2,23 +2,15 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import { personalInfo } from "../data/portfolioData";
 import ThreeScene from "./ThreeScene";
 
-const ROLES = [
-  "AI & ML Engineer",
-  "Full Stack Developer",
-  "Web Developer",
-];
+const ROLES = ["AI & ML Student", "Web Developer", "Curious Builder"];
 
-function useTypewriter(words, typeSpeed = 80, deleteSpeed = 40, pause = 1600) {
-  const [state, setState] = useState({
-    index: 0,
-    subIndex: 0,
-    deleting: false,
-  });
+function useTypewriter(words, typeSpeed = 75, deleteSpeed = 38, pause = 1500) {
+  const [state, setState] = useState({ index: 0, subIndex: 0, deleting: false });
 
   useEffect(() => {
     const { index, subIndex, deleting } = state;
@@ -31,12 +23,7 @@ function useTypewriter(words, typeSpeed = 80, deleteSpeed = 40, pause = 1600) {
 
     if (deleting && subIndex === 0) {
       const timer = setTimeout(
-        () =>
-          setState((s) => ({
-            ...s,
-            deleting: false,
-            index: (s.index + 1) % words.length,
-          })),
+        () => setState((s) => ({ ...s, deleting: false, index: (s.index + 1) % words.length })),
         deleteSpeed
       );
       return () => clearTimeout(timer);
@@ -63,88 +50,105 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
+      className="relative isolate flex min-h-[92svh] items-center overflow-hidden px-5 pb-16 pt-28 sm:px-8 lg:min-h-screen"
     >
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_35%,rgba(8,145,178,0.16),transparent_45%),radial-gradient(ellipse_at_15%_80%,rgba(37,99,235,0.12),transparent_40%)]" />
       <ThreeScene />
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          initial={{ opacity: 0, y: 22 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <span className="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium mb-3 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10">
-            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-400/[0.08] px-4 py-2 text-sm font-medium text-cyan-200">
+            <span className="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.8)]" />
             {role}
-            <span className="animate-pulse">|</span>
+            <span className="animate-pulse text-cyan-400" aria-hidden="true">▍</span>
           </span>
 
-          <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white">
-            PATNALA
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-              HARI KRISHNA
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-gray-400">
+            Hello, I'm
+          </p>
+          <h1 className="max-w-4xl text-4xl font-black leading-[1.08] tracking-tight text-white sm:text-6xl xl:text-7xl">
+            Hari Krishna
+            <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-400 to-blue-500 bg-clip-text text-transparent">
+              Patnala.
             </span>
           </h1>
 
-          <p className="text-gray-300 mt-6 text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-8 text-gray-300 sm:text-lg">
             {personalInfo.heroTagline}
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <button
-              type="button"
-              onClick={(e) => scrollTo(e, "#projects")}
-              className="px-6 py-3 rounded-xl bg-cyan-500 text-black font-bold hover:bg-cyan-400 transition-colors shadow-lg shadow-cyan-500/25"
-            >
-              View Projects
-            </button>
-
+          <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href={`mailto:${personalInfo.email}`}
-              className="px-6 py-3 rounded-xl border border-white/30 text-white hover:bg-white/10 transition-colors"
+              href="#projects"
+              onClick={(e) => scrollTo(e, "#projects")}
+              className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-cyan-300 px-5 py-3 font-bold text-slate-950 shadow-lg shadow-cyan-500/15 transition hover:-translate-y-0.5 hover:bg-cyan-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
             >
-              Contact Me
+              Explore projects <ArrowUpRight size={18} />
             </a>
+            <a
+              href="#contact"
+              onClick={(e) => scrollTo(e, "#contact")}
+              className="inline-flex min-h-12 items-center rounded-xl border border-white/15 bg-white/[0.04] px-5 py-3 font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/[0.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+            >
+              Get in touch
+            </a>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-gray-400">
+            <a className="inline-flex items-center gap-2 transition hover:text-cyan-200" href={personalInfo.github} target="_blank" rel="noopener noreferrer">
+              <Github size={17} /> GitHub <ArrowUpRight size={14} />
+            </a>
+            <a className="inline-flex items-center gap-2 transition hover:text-cyan-200" href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">
+              <Linkedin size={17} /> LinkedIn <ArrowUpRight size={14} />
+            </a>
+            <span className="hidden h-4 w-px bg-white/15 sm:block" />
+            <span>B.Tech AIML · Class of 2028</span>
           </div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="flex justify-center"
+          transition={{ duration: 0.8, delay: 0.12 }}
+          className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none"
         >
-          <div className="relative">
-            <div className="absolute inset-0 bg-cyan-500 blur-[100px] opacity-30 rounded-full" />
-
+          <div className="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-transparent blur-2xl" />
+          <div className="relative rounded-[2rem] border border-white/15 bg-white/[0.04] p-3 shadow-2xl shadow-black/30 backdrop-blur-sm">
+            <div className="absolute left-7 top-7 z-10 flex items-center gap-2 rounded-full border border-white/15 bg-slate-950/75 px-3 py-2 text-xs font-medium text-gray-200 backdrop-blur-md">
+              <span className="h-2 w-2 rounded-full bg-emerald-400" />
+              Learning · Building · Improving
+            </div>
             <Image
               src="/images/hari-formal.jpg"
-              alt="Hari Krishna"
-              width={450}
-              height={450}
+              alt="Portrait of Hari Krishna"
+              width={640}
+              height={760}
               priority
-              className="rounded-3xl relative z-10 border border-white/20 object-cover"
+              sizes="(max-width: 1024px) 90vw, 42vw"
+              className="relative z-0 aspect-[4/5] w-full rounded-[1.5rem] object-cover object-center"
             />
+          </div>
+          <div className="absolute -bottom-5 -left-4 rounded-2xl border border-cyan-300/20 bg-slate-950/90 px-4 py-3 shadow-xl backdrop-blur-md sm:-left-8">
+            <p className="text-xs text-gray-400">Currently focused on</p>
+            <p className="mt-1 text-sm font-semibold text-cyan-200">AI · Web · Product thinking</p>
           </div>
         </motion.div>
       </div>
 
-      <motion.div
+      <motion.a
+        href="#about"
+        onClick={(e) => scrollTo(e, "#about")}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 8, 0] }}
-        transition={{ opacity: { delay: 1.5 }, y: { repeat: Infinity, duration: 2 } }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
+        animate={{ opacity: 1, y: [0, 5, 0] }}
+        transition={{ opacity: { delay: 1 }, y: { repeat: Infinity, duration: 2 } }}
+        className="absolute bottom-5 left-1/2 z-10 hidden -translate-x-1/2 items-center gap-2 text-xs uppercase tracking-[0.2em] text-gray-500 transition hover:text-cyan-200 md:flex"
       >
-        <button
-          type="button"
-          onClick={(e) => scrollTo(e, "#about")}
-          aria-label="Scroll to about section"
-          className="text-gray-300 hover:text-cyan-400 transition-colors"
-        >
-          <ChevronDown size={28} />
-        </button>
-      </motion.div>
+        Scroll to explore <ArrowDown size={14} />
+      </motion.a>
     </section>
   );
 }
