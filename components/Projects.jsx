@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { projects } from "../data/portfolioData";
 
 export default function Projects() {
@@ -68,7 +69,7 @@ export default function Projects() {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-10 items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
               >
-                <Github size={16} /> Source code <ArrowUpRight size={14} />
+                <FaGithub size={16} /> Source code <ArrowUpRight size={14} />
               </a>
               {project.live && (
                 <a
