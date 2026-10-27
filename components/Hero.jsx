@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight, Github, Linkedin } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { personalInfo } from "../data/portfolioData";
 import ThreeScene from "./ThreeScene";
@@ -100,10 +101,10 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-gray-400">
             <a className="inline-flex items-center gap-2 transition hover:text-cyan-200" href={personalInfo.github} target="_blank" rel="noopener noreferrer">
-              <Github size={17} /> GitHub <ArrowUpRight size={14} />
+              <FaGithub size={17} /> GitHub <ArrowUpRight size={14} />
             </a>
             <a className="inline-flex items-center gap-2 transition hover:text-cyan-200" href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">
-              <Linkedin size={17} /> LinkedIn <ArrowUpRight size={14} />
+              <FaLinkedin size={17} /> LinkedIn <ArrowUpRight size={14} />
             </a>
             <span className="hidden h-4 w-px bg-white/15 sm:block" />
             <span>B.Tech AIML · Class of 2028</span>
